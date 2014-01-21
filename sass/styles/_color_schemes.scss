@@ -1,0 +1,30 @@
+/* Dapper Brown */
+$brown_xlight: #e3dedb;
+$brown_light: #877a71;
+$brown: #574b43;
+$brown_dark: #42372f;
+$brown_xdark: #1b1410;
+
+$white: #FFF;
+
+$honeycomb: '../patterns/dapper_light_honeycomb.png';
+$woven: '../patterns/dapper_woven.png';
+$illusions: '../patterns/dapper_illusions.png';
+
+/* Dapper Color API */
+/* Sidebar */
+$color_accent_light: $brown_xlight;
+/* Links */
+$color_accent: $brown_light;
+/* Background color for cart block */
+$color_primary: $brown;
+/* Catalog overlay, Dark Links */
+$color_accent_dark: $brown_dark;
+/* Dark header color, some links */
+$color_accent_black: $brown_xdark;
+/* Sidebar Texture */
+$texture_light: $color_accent_light url($honeycomb);
+/* Header Texture, light */
+$texture_medium: $color_primary url($woven);
+/* Header Texture */
+$texture_dark: $color_accent_black url($woven);

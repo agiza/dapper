@@ -7,6 +7,14 @@
  * @see https://drupal.org/node/1728096
  */
 
+/**
+ * Adds the necessary CSS for the line item summary template.
+ */
+function dapper_preprocess_commerce_line_item_summary(&$variables) {
+  $variables['cart_link'] = check_plain(url('cart'));
+  $variables['checkout_link'] = check_plain(url('checkout'));
+}
+
 
 /**
  * Override or insert variables into the maintenance page template.

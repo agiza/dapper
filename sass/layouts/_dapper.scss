@@ -32,13 +32,14 @@ $zen-auto-include-item-base: false;
  */
 #page,
 .region-bottom {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 1200px;
+  /* Margins should always be 0 */
+  margin-left: 0;
+  margin-right: 0;
+  max-width: 955px;
+  position: relative;
 }
 
 /* Apply the shared properties of grid items in a single, efficient ruleset. */
-#header,
 #content,
 #navigation,
 .region-sidebar-first,
@@ -49,7 +50,6 @@ $zen-auto-include-item-base: false;
 }
 
 /* Containers for grid items and flow items. */
-#header,
 #main,
 #footer {
   @include zen-grid-container();
@@ -59,15 +59,31 @@ $zen-auto-include-item-base: false;
 @media all and (min-width: 480px) {
   #main {
     /* Move all the children of #main down to make room. */
-    padding-top: $nav-height;
+    padding-top: $nav-height*2;
     position: relative;
   }
   #navigation {
     /* Move the navbar up inside #main's padding. */
     position: absolute;
+    top: $nav-height;
+    height: $nav-height;
+    width: $zen-grid-width;
+  }
+  #site-slogan {
+    /* Move the navbar up inside #main's padding. */
+    position: absolute;
     top: 0;
     height: $nav-height;
     width: $zen-grid-width;
+    text-align: right;
+    #site-slogan-wrapper {
+      float: left;
+      text-align: left;
+    }
+    .region-searchbox {
+      display: inline-block;
+      text-align: left;
+    }
   }
 }
 
@@ -152,11 +168,42 @@ $zen-auto-include-item-base: false;
 }
 
 /**
- * Use 5 grid columns for larger screens.
+ * Psuedo-tablet smaller sidebar
  */
 @media all and (min-width: 960px) {
+  #page,
+  .region-bottom {
+    margin-left: 290px;
+    position: relative;
+  }
+  #header {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -290px;
+    width: 290px;
+  }
+}
+
+
+/**
+ * Use 5 grid columns for larger screens.
+ */
+@media all and (min-width: 1024px) {
 
   $zen-column-count: 5;
+
+  /**
+   * Provide space for header on sidebar
+   */
+  #page,
+  .region-bottom {
+    margin-left: 330px;
+  }
+  #header {
+    left: -330px;
+    width: 330px;
+  }
 
   /**
    * The layout when there is only one sidebar, the left one.
