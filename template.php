@@ -16,6 +16,44 @@ function dapper_preprocess_commerce_line_item_summary(&$variables) {
 }
 
 
+/* Make the html 5 button work. */
+function dapper_button($variables) {
+  $element = $variables['element'];
+
+  $element['#attributes']['type'] = 'submit';
+  if ($element['#type'] == "button") {
+    element_set_attributes($element, array('id', 'name', 'title'));
+    return '<button' . drupal_attributes($element['#attributes']) . '>' . $element['#value'] . '</button>';
+
+  } else {
+    element_set_attributes($element, array('id', 'name', 'value'));
+
+    $element['#attributes']['class'][] = 'form-' . $element['#button_type'];
+    if (!empty($element['#attributes']['disabled'])) {
+      $element['#attributes']['class'][] = 'form-button-disabled';
+    }
+
+    return '<input' . drupal_attributes($element['#attributes']) . ' />';
+
+  }
+}
+
+/* Tweaking forms for the theme */
+function dapper_form_alter(&$form, &$form_state, $form_id) {
+  if ($form_id == 'search_block_form') {
+    $form['actions']['submit']['#prefix'] = '<div class="button">';
+    $form['actions']['submit']['#type'] = 'button';
+    $form['actions']['submit']['#title'] = 'Search';
+    $form['actions']['submit']['#executes_submit_callback'] = true;
+    $form['actions']['submit']['#value'] = '<span class="icon-search"></span>';
+    $form['actions']['submit']['#suffix'] = '</div>';
+
+    $form['search_block_form']['#title_display'] = 'invisible';
+    $form['search_block_form']['#attributes']['placeholder'] = t('Search');
+    $form['search_block_form']['#attributes']['size'] = 28;
+  }
+}
+
 /**
  * Override or insert variables into the maintenance page template.
  *

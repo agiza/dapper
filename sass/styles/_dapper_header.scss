@@ -32,7 +32,44 @@
 body {
   background: $texture_light;
 }
+#name-and-slogan {
+  padding-top: 45px;
+  #logo {
+    display: inline-block;
+    margin: 0 15px;
+  }
+  h1#site-name {
+    font-weight: 200;
+    a {
+      text-decoration: none;
+      color: $color_primary;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+#site-slogan #site-slogan-wrapper {
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+  line-height: 23px;
+  em {
+    display: inline-block;
+    padding: 0 5px;
+    text-transform: lowercase;
+    font-size: 23px;
+    font-weight: 200;
+  }
+}
 
+@media all and (min-width: 480px) {
+  #site-slogan {
+    #site-slogan-wrapper {
+      margin: 18px 0 0 36px;
+    }
+  }
+}
 /**
  * Psuedo-tablet smaller sidebar
  */
@@ -40,6 +77,54 @@ body {
   /* Make the header bkg look seamless */
   #site-slogan {
     background-position: -290px top;
+  }
+  /* When the nav pops into sidebar, center logo/name */
+  #name-and-slogan {
+    #logo {
+      margin: 0;
+      float: none;
+      text-align: center;
+      display: block;
+      img {
+        display: inline-block;
+      }
+    }
+    h1#site-name {
+      text-align: center;
+      font-weight: 200;
+      a {
+        text-decoration: none;
+        color: $color_primary;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  .block {
+    margin: 18px 36px 0 0;
+  }
+  /* Search Block Style */
+  #search-block-form {
+    background: rgba(255,255,255,0.3);
+    color: $color_accent_black;
+    input,
+    button {
+      padding: 2px 8px 0 8px;
+      line-height: 24px;
+      font-size: 20px;
+      background: none;
+      border: none;
+    }
+    button {
+      vertical-align: bottom;
+    }
+    input:focus {
+      outline: none;
+    }
+    &:hover {
+      background: #FFF;
+    }
   }
 }
 
@@ -55,13 +140,32 @@ body {
 
 /* Cart */
 #block-commerce-cart-cart {
-  font-size: 20px;
-  font-weight: 200;
+  padding: 0;
+  height: $nav-height;
+  .view-footer,
+  .cart-empty-block {
+    padding-top: 18px;
+  }
+  /* Could probably make this a "pop-out" on hover. */
   .view-content {
     display: none;
   }
+  /* Not MVP...
+  &:hover {
+    .view-content {
+      display: block;
+      position: absolute;
+      top: $nav-height;
+      left: 0;
+      background: #FFF;
+      padding: 10px;
+      border-radius: 0 0 10px 10px;
+    }
+  }*/
   .line-item-summary,
   .cart-empty-block {
+    font-size: 20px;
+    font-weight: 200;
     display: block;
     color: rgba(255,255,255,0.5);
     text-decoration: none;
