@@ -1904,35 +1904,38 @@ body {
 
 /* line 35, ../sass/styles/_dapper_header.scss */
 #name-and-slogan {
-  padding-top: 45px;
+  padding: 12px 15px;
+  line-height: normal;
 }
-/* line 37, ../sass/styles/_dapper_header.scss */
+/* line 38, ../sass/styles/_dapper_header.scss */
 #name-and-slogan #logo {
   display: inline-block;
-  margin: 0 15px;
-}
-/* line 41, ../sass/styles/_dapper_header.scss */
-#name-and-slogan h1#site-name {
-  font-weight: 200;
+  vertical-align: bottom;
+  margin: 0 15px 0 0;
 }
 /* line 43, ../sass/styles/_dapper_header.scss */
+#name-and-slogan h1#site-name {
+  font-weight: 200;
+  line-height: normal;
+}
+/* line 46, ../sass/styles/_dapper_header.scss */
 #name-and-slogan h1#site-name a {
   text-decoration: none;
   color: #574b43;
 }
-/* line 46, ../sass/styles/_dapper_header.scss */
+/* line 49, ../sass/styles/_dapper_header.scss */
 #name-and-slogan h1#site-name a:hover {
   text-decoration: none;
 }
 
-/* line 52, ../sass/styles/_dapper_header.scss */
+/* line 55, ../sass/styles/_dapper_header.scss */
 #site-slogan #site-slogan-wrapper {
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.75px;
   line-height: 23px;
 }
-/* line 57, ../sass/styles/_dapper_header.scss */
+/* line 60, ../sass/styles/_dapper_header.scss */
 #site-slogan #site-slogan-wrapper em {
   display: inline-block;
   padding: 0 5px;
@@ -1941,96 +1944,10 @@ body {
   font-weight: 200;
 }
 
-@media all and (min-width: 480px) {
-  /* line 68, ../sass/styles/_dapper_header.scss */
-  #site-slogan #site-slogan-wrapper {
-    margin: 18px 0 0 36px;
-  }
-}
-/**
- * Psuedo-tablet smaller sidebar
- */
-@media all and (min-width: 960px) {
-  /* Make the header bkg look seamless */
-  /* line 78, ../sass/styles/_dapper_header.scss */
-  #site-slogan {
-    background-position: -290px top;
-  }
-
-  /* When the nav pops into sidebar, center logo/name */
-  /* line 83, ../sass/styles/_dapper_header.scss */
-  #name-and-slogan #logo {
-    margin: 0;
-    float: none;
-    text-align: center;
-    display: block;
-  }
-  /* line 88, ../sass/styles/_dapper_header.scss */
-  #name-and-slogan #logo img {
-    display: inline-block;
-  }
-  /* line 92, ../sass/styles/_dapper_header.scss */
-  #name-and-slogan h1#site-name {
-    text-align: center;
-    font-weight: 200;
-  }
-  /* line 95, ../sass/styles/_dapper_header.scss */
-  #name-and-slogan h1#site-name a {
-    text-decoration: none;
-    color: #574b43;
-  }
-  /* line 98, ../sass/styles/_dapper_header.scss */
-  #name-and-slogan h1#site-name a:hover {
-    text-decoration: none;
-  }
-
-  /* line 104, ../sass/styles/_dapper_header.scss */
-  .block {
-    margin: 18px 36px 0 0;
-  }
-
-  /* Search Block Style */
-  /* line 108, ../sass/styles/_dapper_header.scss */
-  #search-block-form {
-    background: rgba(255, 255, 255, 0.3);
-    color: #1b1410;
-  }
-  /* line 112, ../sass/styles/_dapper_header.scss */
-  #search-block-form input,
-  #search-block-form button {
-    padding: 2px 8px 0 8px;
-    line-height: 24px;
-    font-size: 20px;
-    background: none;
-    border: none;
-  }
-  /* line 119, ../sass/styles/_dapper_header.scss */
-  #search-block-form button {
-    vertical-align: bottom;
-  }
-  /* line 122, ../sass/styles/_dapper_header.scss */
-  #search-block-form input:focus {
-    outline: none;
-  }
-  /* line 125, ../sass/styles/_dapper_header.scss */
-  #search-block-form:hover {
-    background: #FFF;
-  }
-}
-/**
- * Larger screens.
- */
-@media all and (min-width: 1024px) {
-  /* Make the header bkg look seamless */
-  /* line 136, ../sass/styles/_dapper_header.scss */
-  #site-slogan {
-    background-position: -330px top;
-  }
-}
 /* Cart */
-/* line 142, ../sass/styles/_dapper_header.scss */
+/* line 70, ../sass/styles/_dapper_header.scss */
 #block-commerce-cart-cart {
-  padding: 0;
+  padding: 0 20px;
   height: 3.5em;
   /* Could probably make this a "pop-out" on hover. */
   /* Not MVP...
@@ -2046,16 +1963,16 @@ body {
     }
   }*/
 }
-/* line 146, ../sass/styles/_dapper_header.scss */
+/* line 74, ../sass/styles/_dapper_header.scss */
 #block-commerce-cart-cart .view-footer,
 #block-commerce-cart-cart .cart-empty-block {
   padding-top: 18px;
 }
-/* line 150, ../sass/styles/_dapper_header.scss */
+/* line 78, ../sass/styles/_dapper_header.scss */
 #block-commerce-cart-cart .view-content {
   display: none;
 }
-/* line 166, ../sass/styles/_dapper_header.scss */
+/* line 94, ../sass/styles/_dapper_header.scss */
 #block-commerce-cart-cart .line-item-summary,
 #block-commerce-cart-cart .cart-empty-block {
   font-size: 20px;
@@ -2063,15 +1980,15 @@ body {
   display: block;
   color: rgba(255, 255, 255, 0.5);
   text-decoration: none;
-  text-align: center;
+  text-align: left;
 }
-/* line 173, ../sass/styles/_dapper_header.scss */
+/* line 101, ../sass/styles/_dapper_header.scss */
 #block-commerce-cart-cart .line-item-summary:hover,
 #block-commerce-cart-cart .cart-empty-block:hover {
   color: #FFF;
   text-shadow: black 2px 2px 5px;
 }
-/* line 178, ../sass/styles/_dapper_header.scss */
+/* line 106, ../sass/styles/_dapper_header.scss */
 #block-commerce-cart-cart .line-item-summary span,
 #block-commerce-cart-cart .line-item-summary em,
 #block-commerce-cart-cart .cart-empty-block span,
@@ -2079,53 +1996,248 @@ body {
   display: inline-block;
   padding-right: 10px;
 }
-/* line 182, ../sass/styles/_dapper_header.scss */
+/* line 110, ../sass/styles/_dapper_header.scss */
 #block-commerce-cart-cart .line-item-summary .icon-cart,
 #block-commerce-cart-cart .cart-empty-block .icon-cart {
   vertical-align: text-bottom;
 }
 
-/* line 1, ../sass/styles/_dapper_primary_nav.scss */
-#navigation #main-menu {
-  padding: 34px 26px 0 26px;
-  font-size: 18px;
-  font-weight: 200;
-  border-bottom: 1px solid #877a71;
-  line-height: normal;
-  margin: 0;
+@media all and (min-width: 480px) {
+  /* line 118, ../sass/styles/_dapper_header.scss */
+  #site-slogan #site-slogan-wrapper {
+    margin: 18px 0 0 36px;
+  }
 }
-/* line 8, ../sass/styles/_dapper_primary_nav.scss */
-#navigation #main-menu:focus {
+/**
+ * Psuedo-tablet smaller sidebar
+ */
+@media all and (min-width: 960px) {
+  /* Make the header bkg look seamless */
+  /* line 128, ../sass/styles/_dapper_header.scss */
+  #site-slogan {
+    background-position: -290px top;
+  }
+
+  /* When the nav pops into sidebar, center logo/name */
+  /* line 132, ../sass/styles/_dapper_header.scss */
+  #name-and-slogan {
+    padding-top: 45px;
+  }
+  /* line 134, ../sass/styles/_dapper_header.scss */
+  #name-and-slogan #logo {
+    margin: 0;
+    float: none;
+    text-align: center;
+    display: block;
+  }
+  /* line 139, ../sass/styles/_dapper_header.scss */
+  #name-and-slogan #logo img {
+    display: inline-block;
+  }
+  /* line 143, ../sass/styles/_dapper_header.scss */
+  #name-and-slogan h1#site-name {
+    text-align: center;
+    font-weight: 200;
+  }
+  /* line 146, ../sass/styles/_dapper_header.scss */
+  #name-and-slogan h1#site-name a {
+    text-decoration: none;
+    color: #574b43;
+  }
+  /* line 149, ../sass/styles/_dapper_header.scss */
+  #name-and-slogan h1#site-name a:hover {
+    text-decoration: none;
+  }
+
+  /* line 155, ../sass/styles/_dapper_header.scss */
+  .block {
+    margin: 18px 36px 0 0;
+  }
+
+  /* Search Block Style */
+  /* line 159, ../sass/styles/_dapper_header.scss */
+  #search-block-form {
+    background: rgba(255, 255, 255, 0.3);
+    color: #1b1410;
+  }
+  /* line 163, ../sass/styles/_dapper_header.scss */
+  #search-block-form input,
+  #search-block-form button {
+    padding: 2px 8px 0 8px;
+    line-height: 24px;
+    font-size: 20px;
+    background: none;
+    border: none;
+  }
+  /* line 170, ../sass/styles/_dapper_header.scss */
+  #search-block-form button {
+    vertical-align: bottom;
+  }
+  /* line 173, ../sass/styles/_dapper_header.scss */
+  #search-block-form input:focus {
+    outline: none;
+  }
+  /* line 176, ../sass/styles/_dapper_header.scss */
+  #search-block-form:hover {
+    background: #FFF;
+  }
+
+  /* line 182, ../sass/styles/_dapper_header.scss */
+  #block-commerce-cart-cart .line-item-summary,
+  #block-commerce-cart-cart .cart-empty-block {
+    text-align: center;
+  }
+}
+/**
+ * Larger screens.
+ */
+@media all and (min-width: 1024px) {
+  /* Make the header bkg look seamless */
+  /* line 193, ../sass/styles/_dapper_header.scss */
+  #site-slogan {
+    background-position: -330px top;
+  }
+}
+/* Menu requires JS */
+/* line 4, ../sass/styles/_dapper_nav.scss */
+.js #navigation {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  padding: 0;
+}
+/* line 9, ../sass/styles/_dapper_nav.scss */
+.js #navigation:focus {
   outline: none;
 }
-/* line 11, ../sass/styles/_dapper_primary_nav.scss */
-#navigation #main-menu h2 {
-  margin: 0;
+/* line 13, ../sass/styles/_dapper_nav.scss */
+.js #navigation ul:focus {
+  outline: none;
 }
-/* line 14, ../sass/styles/_dapper_primary_nav.scss */
-#navigation #main-menu a {
+/* line 16, ../sass/styles/_dapper_nav.scss */
+.js #navigation ul li {
+  display: none;
+  padding: 0;
+}
+/* line 19, ../sass/styles/_dapper_nav.scss */
+.js #navigation ul li.expand_menu {
+  color: #FFF;
+  display: block;
+  font-size: 24px;
+  padding: 0;
+  text-align: right;
+}
+/* line 28, ../sass/styles/_dapper_nav.scss */
+.js #navigation ul.show_menu li {
+  background: #42372f;
+  display: block;
+  float: none;
+}
+/* line 32, ../sass/styles/_dapper_nav.scss */
+.js #navigation ul.show_menu li a {
+  display: block;
+  color: #e3dedb;
+  border-top: 1px solid #42372f;
+  background: #877a71;
+  padding: 5px 10px 3px 10px;
+  line-height: normal;
   text-decoration: none;
+  text-shadow: 0 0 5px #42372f;
+}
+/* line 41, ../sass/styles/_dapper_nav.scss */
+.js #navigation ul.show_menu li a:hover {
+  background: #e3dedb;
   color: #42372f;
+  text-shadow: 0 0 5px #FFF;
 }
-/* line 18, ../sass/styles/_dapper_primary_nav.scss */
-#navigation #main-menu a:hover {
-  color: #877a71;
+/* line 52, ../sass/styles/_dapper_nav.scss */
+.js #secondary-menu ul {
+  background: #42372f;
+  margin: 0;
+  padding: 5px 10px;
 }
-/* line 21, ../sass/styles/_dapper_primary_nav.scss */
-#navigation #main-menu li:hover {
-  border-bottom: 2px solid #e3dedb;
+/* line 56, ../sass/styles/_dapper_nav.scss */
+.js #secondary-menu ul li {
+  display: none;
+  color: #e3dedb;
+  font-size: 18px;
 }
-/* line 24, ../sass/styles/_dapper_primary_nav.scss */
-#navigation #main-menu li {
-  padding: 0 0 10px 0;
-  margin-right: 15px;
-  margin-bottom: -1px;
+/* line 60, ../sass/styles/_dapper_nav.scss */
+.js #secondary-menu ul li a {
+  display: block;
+  color: #e3dedb;
+  border-top: 1px solid #42372f;
+  background: #877a71;
+  padding: 5px 10px 3px 10px;
+  line-height: normal;
+  text-decoration: none;
+  text-shadow: 0 0 5px #42372f;
 }
-/* line 29, ../sass/styles/_dapper_primary_nav.scss */
-#navigation #main-menu li.active {
-  border-bottom: 3px solid #42372f;
+/* line 69, ../sass/styles/_dapper_nav.scss */
+.js #secondary-menu ul li a:hover {
+  background: #e3dedb;
+  color: #42372f;
+  text-shadow: 0 0 5px #FFF;
 }
-/* line 31, ../sass/styles/_dapper_primary_nav.scss */
-#navigation #main-menu li.active a {
-  color: #1b1410;
+/* line 75, ../sass/styles/_dapper_nav.scss */
+.js #secondary-menu ul li.expand_menu {
+  display: block;
+  padding: 0;
+}
+/* line 78, ../sass/styles/_dapper_nav.scss */
+.js #secondary-menu ul li.expand_menu span:before {
+  font-size: 24px;
+  vertical-align: bottom;
+  padding-right: 5px;
+}
+/* line 86, ../sass/styles/_dapper_nav.scss */
+.js #secondary-menu ul.show_menu li {
+  display: block;
+}
+
+@media all and (min-width: 480px) {
+  /* line 94, ../sass/styles/_dapper_nav.scss */
+  #navigation #main-menu {
+    padding: 34px 26px 0 26px;
+    font-size: 18px;
+    font-weight: 200;
+    border-bottom: 1px solid #877a71;
+    line-height: normal;
+    margin: 0;
+  }
+  /* line 101, ../sass/styles/_dapper_nav.scss */
+  #navigation #main-menu:focus {
+    outline: none;
+  }
+  /* line 104, ../sass/styles/_dapper_nav.scss */
+  #navigation #main-menu h2 {
+    margin: 0;
+  }
+  /* line 107, ../sass/styles/_dapper_nav.scss */
+  #navigation #main-menu a {
+    text-decoration: none;
+    color: #42372f;
+  }
+  /* line 111, ../sass/styles/_dapper_nav.scss */
+  #navigation #main-menu a:hover {
+    color: #877a71;
+  }
+  /* line 114, ../sass/styles/_dapper_nav.scss */
+  #navigation #main-menu li:hover {
+    border-bottom: 2px solid #e3dedb;
+  }
+  /* line 117, ../sass/styles/_dapper_nav.scss */
+  #navigation #main-menu li {
+    padding: 0 8px 10px 8px;
+    margin-right: 15px;
+    margin-bottom: -1px;
+  }
+  /* line 122, ../sass/styles/_dapper_nav.scss */
+  #navigation #main-menu li.active {
+    border-bottom: 3px solid #42372f;
+  }
+  /* line 124, ../sass/styles/_dapper_nav.scss */
+  #navigation #main-menu li.active a {
+    color: #1b1410;
+  }
 }

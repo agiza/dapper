@@ -98,11 +98,25 @@ function STARTERKIT_preprocess_html(&$variables, $hook) {
  * @param $hook
  *   The name of the template being rendered ("page" in this case.)
  */
-/* -- Delete this line if you want to use this function
-function STARTERKIT_preprocess_page(&$variables, $hook) {
-  $variables['sample_variable'] = t('Lorem ipsum.');
+function dapper_preprocess_page(&$variables, $hook) {
+  // Tweak main menu
+  $arr = array_reverse($variables['main_menu'], true);
+  $variables['main_menu']['expand_menu'] = array(
+    'attributes' => array('class'=>'icon-list'),
+    'title' => '<span class="element-invisible">Menu</span>',
+    'html' => true
+  );
+  $variables['main_menu'] = array_reverse($variables['main_menu'], true);
+
+  // Tweak secondary menu
+  // This won't work if you're using a menu_block
+  $arr = array_reverse($variables['secondary_menu'], true);
+  $variables['secondary_menu']['expand_menu'] = array(
+    'attributes' => array('class'=>'icon-list'),
+    'title' => 'Catalog',
+  );
+  $variables['secondary_menu'] = array_reverse($variables['secondary_menu'], true);
 }
-// */
 
 /**
  * Override or insert variables into the node templates.
@@ -176,3 +190,13 @@ function STARTERKIT_preprocess_block(&$variables, $hook) {
   //}
 }
 // */
+
+/**
+* Implements hook_entity_info_alter().
+*/
+function dapper_entity_info_alter(&$entity_info) {
+  $entity_info['node']['view modes']['dapper'] = array(
+    'label' => t('Dapper Catalog'),
+    'custom settings' => TRUE,
+  );
+}

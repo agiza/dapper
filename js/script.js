@@ -14,10 +14,12 @@
 
 
 // To understand behaviors, see https://drupal.org/node/756722#behaviors
-Drupal.behaviors.my_custom_behavior = {
+Drupal.behaviors.dapper_menu = {
   attach: function(context, settings) {
 
-    // Place your code here.
+    $(".expand_menu").click(function(){
+      $(this).parent().toggleClass("show_menu");
+    });
 
   }
 };

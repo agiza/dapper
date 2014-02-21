@@ -33,13 +33,16 @@ body {
   background: $texture_light;
 }
 #name-and-slogan {
-  padding-top: 45px;
+  padding: 12px 15px;
+  line-height: normal;
   #logo {
     display: inline-block;
-    margin: 0 15px;
+    vertical-align: bottom;
+    margin: 0 15px 0 0;
   }
   h1#site-name {
     font-weight: 200;
+    line-height: normal;
     a {
       text-decoration: none;
       color: $color_primary;
@@ -63,6 +66,53 @@ body {
   }
 }
 
+/* Cart */
+#block-commerce-cart-cart {
+  padding: 0 20px;
+  height: $nav-height;
+  .view-footer,
+  .cart-empty-block {
+    padding-top: 18px;
+  }
+  /* Could probably make this a "pop-out" on hover. */
+  .view-content {
+    display: none;
+  }
+  /* Not MVP...
+  &:hover {
+    .view-content {
+      display: block;
+      position: absolute;
+      top: $nav-height;
+      left: 0;
+      background: #FFF;
+      padding: 10px;
+      border-radius: 0 0 10px 10px;
+    }
+  }*/
+  .line-item-summary,
+  .cart-empty-block {
+    font-size: 20px;
+    font-weight: 200;
+    display: block;
+    color: rgba(255,255,255,0.5);
+    text-decoration: none;
+    text-align: left;
+    &:hover {
+      color: #FFF;
+      text-shadow: black 2px 2px 5px;
+    }
+    span,
+    em {
+      display: inline-block;
+      padding-right: 10px;
+    }
+    .icon-cart {
+      vertical-align: text-bottom;
+    }
+  }
+}
+
 @media all and (min-width: 480px) {
   #site-slogan {
     #site-slogan-wrapper {
@@ -80,6 +130,7 @@ body {
   }
   /* When the nav pops into sidebar, center logo/name */
   #name-and-slogan {
+  padding-top: 45px;
     #logo {
       margin: 0;
       float: none;
@@ -126,6 +177,12 @@ body {
       background: #FFF;
     }
   }
+  #block-commerce-cart-cart {
+    .line-item-summary,
+    .cart-empty-block {
+      text-align: center;
+    }
+  }
 }
 
 /**
@@ -135,52 +192,5 @@ body {
   /* Make the header bkg look seamless */
   #site-slogan {
     background-position: -330px top;
-  }
-}
-
-/* Cart */
-#block-commerce-cart-cart {
-  padding: 0;
-  height: $nav-height;
-  .view-footer,
-  .cart-empty-block {
-    padding-top: 18px;
-  }
-  /* Could probably make this a "pop-out" on hover. */
-  .view-content {
-    display: none;
-  }
-  /* Not MVP...
-  &:hover {
-    .view-content {
-      display: block;
-      position: absolute;
-      top: $nav-height;
-      left: 0;
-      background: #FFF;
-      padding: 10px;
-      border-radius: 0 0 10px 10px;
-    }
-  }*/
-  .line-item-summary,
-  .cart-empty-block {
-    font-size: 20px;
-    font-weight: 200;
-    display: block;
-    color: rgba(255,255,255,0.5);
-    text-decoration: none;
-    text-align: center;
-    &:hover {
-      color: #FFF;
-      text-shadow: black 2px 2px 5px;
-    }
-    span,
-    em {
-      display: inline-block;
-      padding-right: 10px;
-    }
-    .icon-cart {
-      vertical-align: text-bottom;
-    }
   }
 }
