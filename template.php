@@ -41,6 +41,8 @@ function dapper_button($variables) {
 /* Tweaking forms for the theme */
 function dapper_form_alter(&$form, &$form_state, $form_id) {
   if ($form_id == 'search_block_form') {
+    $form['mobile_link']['#weight'] = -99;
+    $form['mobile_link']['#markup'] = '<span class="icon-search expand_menu"></span>';
     $form['actions']['submit']['#prefix'] = '<div class="button">';
     $form['actions']['submit']['#type'] = 'button';
     $form['actions']['submit']['#title'] = 'Search';

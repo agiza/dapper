@@ -67,11 +67,6 @@
       <?php print $feed_icons; ?>
     </div>
 
-    <div class="header__site-slogan" id="site-slogan">
-      <div id="site-slogan-wrapper"><?php print $site_slogan; ?></div>
-      <?php print render($page['searchbox']); ?>
-    </div>
-
     <div id="navigation">
       <?php if ($main_menu): ?>
         <nav id="main-menu" role="navigation" tabindex="-1">
@@ -92,9 +87,13 @@
             ),
           )); ?>
         </nav>
+      <?php else: ?>
+        <div id="main-menu" role="navigation" tabindex="-1">
+          <?php print render($page['navigation']); ?>
+        </div>
       <?php endif; ?>
 
-      <?php print render($page['navigation']); ?>
+      <?php print render($page['searchbox']); ?>
 
     </div>
 

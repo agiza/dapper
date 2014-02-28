@@ -1,10 +1,10 @@
-@import url(http://fonts.googleapis.com/css?family=Alegreya+Sans:300,400,500,700,300italic,400italic,700italic);
-@import url(../dapper_icomoon_export/style.css);
 /**
  * @file
  * RTL companion for the styles.scss file.
  */
 /* Import Sass mixins, variables, Compass modules, etc. */
+@import url(http://fonts.googleapis.com/css?family=Alegreya+Sans:300,400,500,700,300italic,400italic,700italic);
+@import url(../dapper_icomoon_export/style.css);
 /* Dapper Brown */
 /* Dapper Color API */
 /* Sidebar */
@@ -57,19 +57,19 @@ ul {
   /**
    * The layout when there is only one sidebar, the left one.
    */
-  /* line 102, ../sass/layouts/_dapper.scss */
+  /* line 99, ../sass/layouts/_dapper.scss */
   .sidebar-first {
     /* Span 2 columns, starting in 2nd column from left. */
     /* Span 1 column, starting in 1st column from left. */
   }
-  /* line 104, ../sass/layouts/_dapper.scss */
+  /* line 101, ../sass/layouts/_dapper.scss */
   .sidebar-first #content {
     float: right;
     width: 66.66667%;
     margin-right: 33.33333%;
     margin-left: -100%;
   }
-  /* line 109, ../sass/layouts/_dapper.scss */
+  /* line 106, ../sass/layouts/_dapper.scss */
   .sidebar-first .region-sidebar-first {
     float: right;
     width: 33.33333%;
@@ -80,19 +80,19 @@ ul {
   /**
    * The layout when there is only one sidebar, the right one.
    */
-  /* line 117, ../sass/layouts/_dapper.scss */
+  /* line 114, ../sass/layouts/_dapper.scss */
   .sidebar-second {
     /* Span 2 columns, starting in 1st column from left. */
     /* Span 1 column, starting in 3rd column from left. */
   }
-  /* line 119, ../sass/layouts/_dapper.scss */
+  /* line 116, ../sass/layouts/_dapper.scss */
   .sidebar-second #content {
     float: right;
     width: 66.66667%;
     margin-right: 0%;
     margin-left: -66.66667%;
   }
-  /* line 124, ../sass/layouts/_dapper.scss */
+  /* line 121, ../sass/layouts/_dapper.scss */
   .sidebar-second .region-sidebar-second {
     float: right;
     width: 33.33333%;
@@ -103,27 +103,27 @@ ul {
   /**
    * The layout when there are two sidebars.
    */
-  /* line 132, ../sass/layouts/_dapper.scss */
+  /* line 129, ../sass/layouts/_dapper.scss */
   .two-sidebars {
     /* Span 2 columns, starting in 2nd column from left. */
     /* Span 1 column, starting in 1st column from left. */
     /* Start a new row and span all 3 columns. */
   }
-  /* line 134, ../sass/layouts/_dapper.scss */
+  /* line 131, ../sass/layouts/_dapper.scss */
   .two-sidebars #content {
     float: right;
     width: 66.66667%;
     margin-right: 33.33333%;
     margin-left: -100%;
   }
-  /* line 139, ../sass/layouts/_dapper.scss */
+  /* line 136, ../sass/layouts/_dapper.scss */
   .two-sidebars .region-sidebar-first {
     float: right;
     width: 33.33333%;
     margin-right: 0%;
     margin-left: -33.33333%;
   }
-  /* line 144, ../sass/layouts/_dapper.scss */
+  /* line 141, ../sass/layouts/_dapper.scss */
   .two-sidebars .region-sidebar-second {
     float: right;
     width: 100%;
@@ -137,7 +137,7 @@ ul {
     /* Span 1 column, starting in the 2nd column from left. */
     /* Span 1 column, starting in the 3rd column from left. */
   }
-  /* line 150, ../sass/layouts/_dapper.scss */
+  /* line 147, ../sass/layouts/_dapper.scss */
   .two-sidebars .region-sidebar-second .block {
     padding-left: 10px;
     padding-right: 10px;
@@ -147,7 +147,7 @@ ul {
     box-sizing: border-box;
     word-wrap: break-word;
   }
-  /* line 154, ../sass/layouts/_dapper.scss */
+  /* line 151, ../sass/layouts/_dapper.scss */
   .two-sidebars .region-sidebar-second .block:nth-child(3n+1) {
     float: right;
     width: 33.33333%;
@@ -155,39 +155,19 @@ ul {
     margin-left: -33.33333%;
     clear: right;
   }
-  /* line 159, ../sass/layouts/_dapper.scss */
+  /* line 156, ../sass/layouts/_dapper.scss */
   .two-sidebars .region-sidebar-second .block:nth-child(3n+2) {
     float: right;
     width: 33.33333%;
     margin-right: 33.33333%;
     margin-left: -66.66667%;
   }
-  /* line 163, ../sass/layouts/_dapper.scss */
+  /* line 160, ../sass/layouts/_dapper.scss */
   .two-sidebars .region-sidebar-second .block:nth-child(3n) {
     float: right;
     width: 33.33333%;
     margin-right: 66.66667%;
     margin-left: -100%;
-  }
-}
-/**
- * Psuedo-tablet smaller sidebar
- */
-@media all and (min-width: 960px) {
-  /* line 175, ../sass/layouts/_dapper.scss */
-  #page,
-  .region-bottom {
-    margin-left: 290px;
-    position: relative;
-  }
-
-  /* line 179, ../sass/layouts/_dapper.scss */
-  #header {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: -290px;
-    width: 290px;
   }
 }
 /**
@@ -197,13 +177,13 @@ ul {
   /**
    * Provide space for header on sidebar
    */
-  /* line 200, ../sass/layouts/_dapper.scss */
+  /* line 179, ../sass/layouts/_dapper.scss */
   #page,
   .region-bottom {
     margin-left: 330px;
   }
 
-  /* line 203, ../sass/layouts/_dapper.scss */
+  /* line 183, ../sass/layouts/_dapper.scss */
   #header {
     left: -330px;
     width: 330px;
@@ -212,19 +192,19 @@ ul {
   /**
    * The layout when there is only one sidebar, the left one.
    */
-  /* line 211, ../sass/layouts/_dapper.scss */
+  /* line 191, ../sass/layouts/_dapper.scss */
   .sidebar-first {
     /* Span 4 columns, starting in 2nd column from left. */
     /* Span 1 column, starting in 1st column from left. */
   }
-  /* line 213, ../sass/layouts/_dapper.scss */
+  /* line 193, ../sass/layouts/_dapper.scss */
   .sidebar-first #content {
     float: right;
     width: 80%;
     margin-right: 20%;
     margin-left: -100%;
   }
-  /* line 218, ../sass/layouts/_dapper.scss */
+  /* line 198, ../sass/layouts/_dapper.scss */
   .sidebar-first .region-sidebar-first {
     float: right;
     width: 20%;
@@ -235,19 +215,19 @@ ul {
   /**
    * The layout when there is only one sidebar, the right one.
    */
-  /* line 226, ../sass/layouts/_dapper.scss */
+  /* line 206, ../sass/layouts/_dapper.scss */
   .sidebar-second {
     /* Span 4 columns, starting in 1st column from left. */
     /* Span 1 column, starting in 5th column from left. */
   }
-  /* line 228, ../sass/layouts/_dapper.scss */
+  /* line 208, ../sass/layouts/_dapper.scss */
   .sidebar-second #content {
     float: right;
     width: 80%;
     margin-right: 0%;
     margin-left: -80%;
   }
-  /* line 233, ../sass/layouts/_dapper.scss */
+  /* line 213, ../sass/layouts/_dapper.scss */
   .sidebar-second .region-sidebar-second {
     float: right;
     width: 20%;
@@ -258,32 +238,40 @@ ul {
   /**
    * The layout when there are two sidebars.
    */
-  /* line 241, ../sass/layouts/_dapper.scss */
+  /* line 221, ../sass/layouts/_dapper.scss */
   .two-sidebars {
     /* Span 3 columns, starting in 2nd column from left. */
     /* Span 1 column, starting in 1st column from left. */
     /* Span 1 column, starting in 5th column from left. */
   }
-  /* line 243, ../sass/layouts/_dapper.scss */
+  /* line 223, ../sass/layouts/_dapper.scss */
   .two-sidebars #content {
     float: right;
     width: 60%;
     margin-right: 20%;
     margin-left: -80%;
   }
-  /* line 248, ../sass/layouts/_dapper.scss */
+  /* line 228, ../sass/layouts/_dapper.scss */
   .two-sidebars .region-sidebar-first {
     float: right;
     width: 20%;
     margin-right: 0%;
     margin-left: -20%;
   }
-  /* line 253, ../sass/layouts/_dapper.scss */
+  /* line 233, ../sass/layouts/_dapper.scss */
   .two-sidebars .region-sidebar-second {
     float: right;
     width: 20%;
     margin-right: 80%;
     margin-left: -100%;
+  }
+}
+@media all and (min-width: 1200px) {
+  /* line 240, ../sass/layouts/_dapper.scss */
+  .page-node #content {
+    width: 80%;
+    margin: 0 auto;
+    font-size: 120%;
   }
 }
 /* Component (SMACSS module) rules */

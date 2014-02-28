@@ -1,5 +1,3 @@
-@import url(http://fonts.googleapis.com/css?family=Alegreya+Sans:300,400,500,700,300italic,400italic,700italic);
-@import url(../dapper_icomoon_export/style.css);
 /**
  * @file
  * Styles are organized using the SMACSS technique. @see http://smacss.com/book/
@@ -8,6 +6,8 @@
  * of these @include files will be combined into a single file.
  */
 /* Import Sass mixins, variables, Compass modules, etc. */
+@import url(http://fonts.googleapis.com/css?family=Alegreya+Sans:300,400,500,700,300italic,400italic,700italic);
+@import url(../dapper_icomoon_export/style.css);
 /* Dapper Brown */
 /* Dapper Color API */
 /* Sidebar */
@@ -600,22 +600,18 @@ table {
  */
 /**
  * Center the page.
- *
- * For screen sizes larger than 1200px, prevent excessively long lines of text
- * by setting a max-width.
  */
-/* line 34, ../sass/layouts/_dapper.scss */
+/* line 31, ../sass/layouts/_dapper.scss */
 #page,
 .region-bottom {
   /* Margins should always be 0 */
   margin-left: 0;
   margin-right: 0;
-  max-width: 955px;
   position: relative;
 }
 
 /* Apply the shared properties of grid items in a single, efficient ruleset. */
-/* line 47, ../sass/layouts/_dapper.scss */
+/* line 43, ../sass/layouts/_dapper.scss */
 #content,
 #navigation,
 .region-sidebar-first,
@@ -646,40 +642,42 @@ table {
 
 /* Navigation bar */
 @media all and (min-width: 480px) {
-  /* line 60, ../sass/layouts/_dapper.scss */
+  /* line 56, ../sass/layouts/_dapper.scss */
   #main {
     /* Move all the children of #main down to make room. */
-    padding-top: 8.05em;
+    padding-top: 3.5em;
     position: relative;
   }
 
-  /* line 65, ../sass/layouts/_dapper.scss */
+  /* line 61, ../sass/layouts/_dapper.scss */
   #navigation {
     /* Move the navbar up inside #main's padding. */
     position: absolute;
-    top: 3.5em;
-    height: 3.5em;
+    top: 0 !important;
+    right: 0 !important;
+    height: 3.5em !important;
     width: 100%;
   }
 
-  /* line 72, ../sass/layouts/_dapper.scss */
-  #site-slogan {
-    /* Move the navbar up inside #main's padding. */
+  /* line 69, ../sass/layouts/_dapper.scss */
+  .region-searchbox {
+    display: inline-block;
+  }
+
+  /* line 74, ../sass/layouts/_dapper.scss */
+  #page,
+  .region-bottom {
+    margin-left: 240px;
+    position: relative;
+  }
+
+  /* line 78, ../sass/layouts/_dapper.scss */
+  #header {
     position: absolute;
     top: 0;
-    height: 3.5em;
-    width: 100%;
-    text-align: right;
-  }
-  /* line 79, ../sass/layouts/_dapper.scss */
-  #site-slogan #site-slogan-wrapper {
-    float: left;
-    text-align: left;
-  }
-  /* line 83, ../sass/layouts/_dapper.scss */
-  #site-slogan .region-searchbox {
-    display: inline-block;
-    text-align: left;
+    bottom: 0;
+    left: -240px;
+    width: 240px;
   }
 }
 /**
@@ -689,19 +687,19 @@ table {
   /**
    * The layout when there is only one sidebar, the left one.
    */
-  /* line 102, ../sass/layouts/_dapper.scss */
+  /* line 99, ../sass/layouts/_dapper.scss */
   .sidebar-first {
     /* Span 2 columns, starting in 2nd column from left. */
     /* Span 1 column, starting in 1st column from left. */
   }
-  /* line 104, ../sass/layouts/_dapper.scss */
+  /* line 101, ../sass/layouts/_dapper.scss */
   .sidebar-first #content {
     float: left;
     width: 66.66667%;
     margin-left: 33.33333%;
     margin-right: -100%;
   }
-  /* line 109, ../sass/layouts/_dapper.scss */
+  /* line 106, ../sass/layouts/_dapper.scss */
   .sidebar-first .region-sidebar-first {
     float: left;
     width: 33.33333%;
@@ -712,19 +710,19 @@ table {
   /**
    * The layout when there is only one sidebar, the right one.
    */
-  /* line 117, ../sass/layouts/_dapper.scss */
+  /* line 114, ../sass/layouts/_dapper.scss */
   .sidebar-second {
     /* Span 2 columns, starting in 1st column from left. */
     /* Span 1 column, starting in 3rd column from left. */
   }
-  /* line 119, ../sass/layouts/_dapper.scss */
+  /* line 116, ../sass/layouts/_dapper.scss */
   .sidebar-second #content {
     float: left;
     width: 66.66667%;
     margin-left: 0%;
     margin-right: -66.66667%;
   }
-  /* line 124, ../sass/layouts/_dapper.scss */
+  /* line 121, ../sass/layouts/_dapper.scss */
   .sidebar-second .region-sidebar-second {
     float: left;
     width: 33.33333%;
@@ -735,27 +733,27 @@ table {
   /**
    * The layout when there are two sidebars.
    */
-  /* line 132, ../sass/layouts/_dapper.scss */
+  /* line 129, ../sass/layouts/_dapper.scss */
   .two-sidebars {
     /* Span 2 columns, starting in 2nd column from left. */
     /* Span 1 column, starting in 1st column from left. */
     /* Start a new row and span all 3 columns. */
   }
-  /* line 134, ../sass/layouts/_dapper.scss */
+  /* line 131, ../sass/layouts/_dapper.scss */
   .two-sidebars #content {
     float: left;
     width: 66.66667%;
     margin-left: 33.33333%;
     margin-right: -100%;
   }
-  /* line 139, ../sass/layouts/_dapper.scss */
+  /* line 136, ../sass/layouts/_dapper.scss */
   .two-sidebars .region-sidebar-first {
     float: left;
     width: 33.33333%;
     margin-left: 0%;
     margin-right: -33.33333%;
   }
-  /* line 144, ../sass/layouts/_dapper.scss */
+  /* line 141, ../sass/layouts/_dapper.scss */
   .two-sidebars .region-sidebar-second {
     float: left;
     width: 100%;
@@ -769,7 +767,7 @@ table {
     /* Span 1 column, starting in the 2nd column from left. */
     /* Span 1 column, starting in the 3rd column from left. */
   }
-  /* line 150, ../sass/layouts/_dapper.scss */
+  /* line 147, ../sass/layouts/_dapper.scss */
   .two-sidebars .region-sidebar-second .block {
     padding-left: 10px;
     padding-right: 10px;
@@ -779,7 +777,7 @@ table {
     box-sizing: border-box;
     word-wrap: break-word;
   }
-  /* line 154, ../sass/layouts/_dapper.scss */
+  /* line 151, ../sass/layouts/_dapper.scss */
   .two-sidebars .region-sidebar-second .block:nth-child(3n+1) {
     float: left;
     width: 33.33333%;
@@ -787,39 +785,19 @@ table {
     margin-right: -33.33333%;
     clear: left;
   }
-  /* line 159, ../sass/layouts/_dapper.scss */
+  /* line 156, ../sass/layouts/_dapper.scss */
   .two-sidebars .region-sidebar-second .block:nth-child(3n+2) {
     float: left;
     width: 33.33333%;
     margin-left: 33.33333%;
     margin-right: -66.66667%;
   }
-  /* line 163, ../sass/layouts/_dapper.scss */
+  /* line 160, ../sass/layouts/_dapper.scss */
   .two-sidebars .region-sidebar-second .block:nth-child(3n) {
     float: left;
     width: 33.33333%;
     margin-left: 66.66667%;
     margin-right: -100%;
-  }
-}
-/**
- * Psuedo-tablet smaller sidebar
- */
-@media all and (min-width: 960px) {
-  /* line 175, ../sass/layouts/_dapper.scss */
-  #page,
-  .region-bottom {
-    margin-left: 290px;
-    position: relative;
-  }
-
-  /* line 179, ../sass/layouts/_dapper.scss */
-  #header {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: -290px;
-    width: 290px;
   }
 }
 /**
@@ -829,13 +807,13 @@ table {
   /**
    * Provide space for header on sidebar
    */
-  /* line 200, ../sass/layouts/_dapper.scss */
+  /* line 179, ../sass/layouts/_dapper.scss */
   #page,
   .region-bottom {
     margin-left: 330px;
   }
 
-  /* line 203, ../sass/layouts/_dapper.scss */
+  /* line 183, ../sass/layouts/_dapper.scss */
   #header {
     left: -330px;
     width: 330px;
@@ -844,19 +822,19 @@ table {
   /**
    * The layout when there is only one sidebar, the left one.
    */
-  /* line 211, ../sass/layouts/_dapper.scss */
+  /* line 191, ../sass/layouts/_dapper.scss */
   .sidebar-first {
     /* Span 4 columns, starting in 2nd column from left. */
     /* Span 1 column, starting in 1st column from left. */
   }
-  /* line 213, ../sass/layouts/_dapper.scss */
+  /* line 193, ../sass/layouts/_dapper.scss */
   .sidebar-first #content {
     float: left;
     width: 80%;
     margin-left: 20%;
     margin-right: -100%;
   }
-  /* line 218, ../sass/layouts/_dapper.scss */
+  /* line 198, ../sass/layouts/_dapper.scss */
   .sidebar-first .region-sidebar-first {
     float: left;
     width: 20%;
@@ -867,19 +845,19 @@ table {
   /**
    * The layout when there is only one sidebar, the right one.
    */
-  /* line 226, ../sass/layouts/_dapper.scss */
+  /* line 206, ../sass/layouts/_dapper.scss */
   .sidebar-second {
     /* Span 4 columns, starting in 1st column from left. */
     /* Span 1 column, starting in 5th column from left. */
   }
-  /* line 228, ../sass/layouts/_dapper.scss */
+  /* line 208, ../sass/layouts/_dapper.scss */
   .sidebar-second #content {
     float: left;
     width: 80%;
     margin-left: 0%;
     margin-right: -80%;
   }
-  /* line 233, ../sass/layouts/_dapper.scss */
+  /* line 213, ../sass/layouts/_dapper.scss */
   .sidebar-second .region-sidebar-second {
     float: left;
     width: 20%;
@@ -890,32 +868,40 @@ table {
   /**
    * The layout when there are two sidebars.
    */
-  /* line 241, ../sass/layouts/_dapper.scss */
+  /* line 221, ../sass/layouts/_dapper.scss */
   .two-sidebars {
     /* Span 3 columns, starting in 2nd column from left. */
     /* Span 1 column, starting in 1st column from left. */
     /* Span 1 column, starting in 5th column from left. */
   }
-  /* line 243, ../sass/layouts/_dapper.scss */
+  /* line 223, ../sass/layouts/_dapper.scss */
   .two-sidebars #content {
     float: left;
     width: 60%;
     margin-left: 20%;
     margin-right: -80%;
   }
-  /* line 248, ../sass/layouts/_dapper.scss */
+  /* line 228, ../sass/layouts/_dapper.scss */
   .two-sidebars .region-sidebar-first {
     float: left;
     width: 20%;
     margin-left: 0%;
     margin-right: -20%;
   }
-  /* line 253, ../sass/layouts/_dapper.scss */
+  /* line 233, ../sass/layouts/_dapper.scss */
   .two-sidebars .region-sidebar-second {
     float: left;
     width: 20%;
     margin-left: 80%;
     margin-right: -100%;
+  }
+}
+@media all and (min-width: 1200px) {
+  /* line 240, ../sass/layouts/_dapper.scss */
+  .page-node #content {
+    width: 80%;
+    margin: 0 auto;
+    font-size: 120%;
   }
 }
 /* Component (SMACSS module) rules */
@@ -1975,7 +1961,7 @@ body {
 /* line 94, ../sass/styles/_dapper_header.scss */
 #block-commerce-cart-cart .line-item-summary,
 #block-commerce-cart-cart .cart-empty-block {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 200;
   display: block;
   color: rgba(255, 255, 255, 0.5);
@@ -2054,35 +2040,7 @@ body {
     margin: 18px 36px 0 0;
   }
 
-  /* Search Block Style */
-  /* line 159, ../sass/styles/_dapper_header.scss */
-  #search-block-form {
-    background: rgba(255, 255, 255, 0.3);
-    color: #1b1410;
-  }
-  /* line 163, ../sass/styles/_dapper_header.scss */
-  #search-block-form input,
-  #search-block-form button {
-    padding: 2px 8px 0 8px;
-    line-height: 24px;
-    font-size: 20px;
-    background: none;
-    border: none;
-  }
-  /* line 170, ../sass/styles/_dapper_header.scss */
-  #search-block-form button {
-    vertical-align: bottom;
-  }
-  /* line 173, ../sass/styles/_dapper_header.scss */
-  #search-block-form input:focus {
-    outline: none;
-  }
-  /* line 176, ../sass/styles/_dapper_header.scss */
-  #search-block-form:hover {
-    background: #FFF;
-  }
-
-  /* line 182, ../sass/styles/_dapper_header.scss */
+  /* line 160, ../sass/styles/_dapper_header.scss */
   #block-commerce-cart-cart .line-item-summary,
   #block-commerce-cart-cart .cart-empty-block {
     text-align: center;
@@ -2093,48 +2051,61 @@ body {
  */
 @media all and (min-width: 1024px) {
   /* Make the header bkg look seamless */
-  /* line 193, ../sass/styles/_dapper_header.scss */
+  /* line 171, ../sass/styles/_dapper_header.scss */
   #site-slogan {
     background-position: -330px top;
   }
+
+  /* line 176, ../sass/styles/_dapper_header.scss */
+  #block-commerce-cart-cart .line-item-summary,
+  #block-commerce-cart-cart .cart-empty-block {
+    font-size: 20px;
+  }
 }
-/* Menu requires JS */
-/* line 4, ../sass/styles/_dapper_nav.scss */
-.js #navigation {
+/* line 1, ../sass/styles/_dapper_nav.scss */
+#navigation {
   position: absolute;
-  top: 18px;
-  right: 20px;
-  padding: 0;
+  top: 13px;
+  right: 15px;
+  padding: 5px 5px 2px 5px;
+  background: rgba(65, 55, 57, 0.5);
+  /* Search Block Style */
 }
-/* line 9, ../sass/styles/_dapper_nav.scss */
-.js #navigation:focus {
+/* line 7, ../sass/styles/_dapper_nav.scss */
+#navigation:focus {
   outline: none;
 }
-/* line 13, ../sass/styles/_dapper_nav.scss */
-.js #navigation ul:focus {
+/* line 10, ../sass/styles/_dapper_nav.scss */
+#navigation #main-menu {
+  display: inline-block;
+  vertical-align: top;
+}
+/* line 15, ../sass/styles/_dapper_nav.scss */
+#navigation ul:focus {
   outline: none;
 }
-/* line 16, ../sass/styles/_dapper_nav.scss */
-.js #navigation ul li {
+/* line 18, ../sass/styles/_dapper_nav.scss */
+#navigation ul li {
   display: none;
   padding: 0;
 }
-/* line 19, ../sass/styles/_dapper_nav.scss */
-.js #navigation ul li.expand_menu {
+/* line 21, ../sass/styles/_dapper_nav.scss */
+#navigation ul li.expand_menu {
   color: #FFF;
   display: block;
   font-size: 24px;
   padding: 0;
   text-align: right;
 }
-/* line 28, ../sass/styles/_dapper_nav.scss */
-.js #navigation ul.show_menu li {
+/* line 30, ../sass/styles/_dapper_nav.scss */
+#navigation ul.show_menu li {
   background: #42372f;
   display: block;
   float: none;
+  padding-right: 0;
 }
-/* line 32, ../sass/styles/_dapper_nav.scss */
-.js #navigation ul.show_menu li a {
+/* line 35, ../sass/styles/_dapper_nav.scss */
+#navigation ul.show_menu li a {
   display: block;
   color: #e3dedb;
   border-top: 1px solid #42372f;
@@ -2144,26 +2115,87 @@ body {
   text-decoration: none;
   text-shadow: 0 0 5px #42372f;
 }
-/* line 41, ../sass/styles/_dapper_nav.scss */
-.js #navigation ul.show_menu li a:hover {
+/* line 44, ../sass/styles/_dapper_nav.scss */
+#navigation ul.show_menu li a:hover {
   background: #e3dedb;
   color: #42372f;
   text-shadow: 0 0 5px #FFF;
 }
-/* line 52, ../sass/styles/_dapper_nav.scss */
-.js #secondary-menu ul {
+/* line 54, ../sass/styles/_dapper_nav.scss */
+#navigation .region-searchbox {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+}
+/* line 58, ../sass/styles/_dapper_nav.scss */
+#navigation .region-searchbox #search-block-form {
+  color: #e3dedb;
+}
+/* line 61, ../sass/styles/_dapper_nav.scss */
+#navigation .region-searchbox #search-block-form input,
+#navigation .region-searchbox #search-block-form button {
+  padding: 2px 8px 0 8px;
+  line-height: 24px;
+  font-size: 20px;
+  background: none;
+  border: none;
+}
+/* line 68, ../sass/styles/_dapper_nav.scss */
+#navigation .region-searchbox #search-block-form button {
+  vertical-align: bottom;
+}
+/* line 71, ../sass/styles/_dapper_nav.scss */
+#navigation .region-searchbox #search-block-form input:focus {
+  outline: none;
+}
+/* line 76, ../sass/styles/_dapper_nav.scss */
+#navigation .region-searchbox .container-inline div {
+  display: none;
+}
+/* line 79, ../sass/styles/_dapper_nav.scss */
+#navigation .region-searchbox .container-inline > span.icon-search {
+  text-align: center;
+  width: 24px;
+  font-size: 20px;
+}
+/* line 85, ../sass/styles/_dapper_nav.scss */
+#navigation .region-searchbox .container-inline.show_menu {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.95);
+  width: 200px;
+  top: 0;
+  right: 0;
+  padding: 2px 0;
+  color: #877a71;
+}
+/* line 93, ../sass/styles/_dapper_nav.scss */
+#navigation .region-searchbox .container-inline.show_menu div {
+  display: inline;
+  margin: 0;
+}
+/* line 96, ../sass/styles/_dapper_nav.scss */
+#navigation .region-searchbox .container-inline.show_menu div input {
+  width: 160px;
+}
+/* line 100, ../sass/styles/_dapper_nav.scss */
+#navigation .region-searchbox .container-inline.show_menu > span.icon-search {
+  display: none;
+}
+
+/* line 107, ../sass/styles/_dapper_nav.scss */
+#secondary-menu ul {
   background: #42372f;
   margin: 0;
   padding: 5px 10px;
 }
-/* line 56, ../sass/styles/_dapper_nav.scss */
-.js #secondary-menu ul li {
+/* line 111, ../sass/styles/_dapper_nav.scss */
+#secondary-menu ul li {
   display: none;
   color: #e3dedb;
   font-size: 18px;
 }
-/* line 60, ../sass/styles/_dapper_nav.scss */
-.js #secondary-menu ul li a {
+/* line 115, ../sass/styles/_dapper_nav.scss */
+#secondary-menu ul li a {
   display: block;
   color: #e3dedb;
   border-top: 1px solid #42372f;
@@ -2173,71 +2205,155 @@ body {
   text-decoration: none;
   text-shadow: 0 0 5px #42372f;
 }
-/* line 69, ../sass/styles/_dapper_nav.scss */
-.js #secondary-menu ul li a:hover {
+/* line 124, ../sass/styles/_dapper_nav.scss */
+#secondary-menu ul li a:hover {
   background: #e3dedb;
   color: #42372f;
   text-shadow: 0 0 5px #FFF;
 }
-/* line 75, ../sass/styles/_dapper_nav.scss */
-.js #secondary-menu ul li.expand_menu {
+/* line 130, ../sass/styles/_dapper_nav.scss */
+#secondary-menu ul li.expand_menu {
   display: block;
   padding: 0;
 }
-/* line 78, ../sass/styles/_dapper_nav.scss */
-.js #secondary-menu ul li.expand_menu span:before {
+/* line 133, ../sass/styles/_dapper_nav.scss */
+#secondary-menu ul li.expand_menu span:before {
   font-size: 24px;
   vertical-align: bottom;
   padding-right: 5px;
 }
-/* line 86, ../sass/styles/_dapper_nav.scss */
-.js #secondary-menu ul.show_menu li {
+/* line 141, ../sass/styles/_dapper_nav.scss */
+#secondary-menu ul.show_menu li {
   display: block;
 }
 
 @media all and (min-width: 480px) {
-  /* line 94, ../sass/styles/_dapper_nav.scss */
-  #navigation #main-menu {
-    padding: 34px 26px 0 26px;
-    font-size: 18px;
-    font-weight: 200;
-    border-bottom: 1px solid #877a71;
-    line-height: normal;
-    margin: 0;
+  /* line 148, ../sass/styles/_dapper_nav.scss */
+  #navigation {
+    line-height: 24px !important;
+    background: none;
+    padding: 0;
+    /* Search Block Style */
   }
-  /* line 101, ../sass/styles/_dapper_nav.scss */
+  /* line 152, ../sass/styles/_dapper_nav.scss */
+  #navigation #main-menu {
+    padding: 0;
+    margin: 22px 0 0 10px;
+    font-size: 16px;
+    font-weight: 200;
+    line-height: normal;
+  }
+  /* line 158, ../sass/styles/_dapper_nav.scss */
   #navigation #main-menu:focus {
     outline: none;
   }
-  /* line 104, ../sass/styles/_dapper_nav.scss */
+  /* line 161, ../sass/styles/_dapper_nav.scss */
   #navigation #main-menu h2 {
     margin: 0;
   }
-  /* line 107, ../sass/styles/_dapper_nav.scss */
+  /* line 164, ../sass/styles/_dapper_nav.scss */
   #navigation #main-menu a {
     text-decoration: none;
     color: #42372f;
   }
-  /* line 111, ../sass/styles/_dapper_nav.scss */
+  /* line 168, ../sass/styles/_dapper_nav.scss */
   #navigation #main-menu a:hover {
     color: #877a71;
   }
-  /* line 114, ../sass/styles/_dapper_nav.scss */
+  /* line 171, ../sass/styles/_dapper_nav.scss */
   #navigation #main-menu li:hover {
     border-bottom: 2px solid #e3dedb;
   }
-  /* line 117, ../sass/styles/_dapper_nav.scss */
+  /* line 174, ../sass/styles/_dapper_nav.scss */
   #navigation #main-menu li {
+    display: inline-block;
     padding: 0 8px 10px 8px;
     margin-right: 15px;
     margin-bottom: -1px;
   }
-  /* line 122, ../sass/styles/_dapper_nav.scss */
+  /* line 180, ../sass/styles/_dapper_nav.scss */
   #navigation #main-menu li.active {
     border-bottom: 3px solid #42372f;
   }
-  /* line 124, ../sass/styles/_dapper_nav.scss */
+  /* line 182, ../sass/styles/_dapper_nav.scss */
   #navigation #main-menu li.active a {
     color: #1b1410;
+  }
+  /* line 186, ../sass/styles/_dapper_nav.scss */
+  #navigation #main-menu li.expand_menu {
+    display: none;
+  }
+  /* line 191, ../sass/styles/_dapper_nav.scss */
+  #navigation .region-searchbox {
+    display: block;
+    position: absolute;
+    top: 22px;
+    right: 22px;
+  }
+  /* line 196, ../sass/styles/_dapper_nav.scss */
+  #navigation .region-searchbox #search-block-form {
+    color: #42372f;
+  }
+  /* line 200, ../sass/styles/_dapper_nav.scss */
+  #navigation .region-searchbox #search-block-form .container-inline.show_menu {
+    background: #e3dedb;
+  }
+  /* line 202, ../sass/styles/_dapper_nav.scss */
+  #navigation .region-searchbox #search-block-form .container-inline.show_menu input {
+    font-size: 16px;
+  }
+  /* line 205, ../sass/styles/_dapper_nav.scss */
+  #navigation .region-searchbox #search-block-form .container-inline.show_menu button {
+    font-size: 20px;
+  }
+}
+/* Only smaller screens with columns */
+@media all and (min-width: 960px) {
+  /* line 215, ../sass/styles/_dapper_nav.scss */
+  #navigation .region-searchbox {
+    top: 22px;
+    right: 22px;
+  }
+  /* line 219, ../sass/styles/_dapper_nav.scss */
+  #navigation .region-searchbox .container-inline .form-item,
+  #navigation .region-searchbox .container-inline .form-actions {
+    display: inline;
+  }
+  /* line 222, ../sass/styles/_dapper_nav.scss */
+  #navigation .region-searchbox .block {
+    margin: 0;
+  }
+  /* line 225, ../sass/styles/_dapper_nav.scss */
+  #navigation .region-searchbox #search-block-form .container-inline {
+    background: #e3dedb;
+    padding: 2px 0;
+  }
+  /* line 228, ../sass/styles/_dapper_nav.scss */
+  #navigation .region-searchbox #search-block-form .container-inline > span.icon-search {
+    display: none;
+  }
+  /* line 231, ../sass/styles/_dapper_nav.scss */
+  #navigation .region-searchbox #search-block-form .container-inline div {
+    display: inline;
+    margin: 0;
+  }
+  /* line 234, ../sass/styles/_dapper_nav.scss */
+  #navigation .region-searchbox #search-block-form .container-inline div input {
+    width: 160px;
+  }
+  /* line 238, ../sass/styles/_dapper_nav.scss */
+  #navigation .region-searchbox #search-block-form .container-inline input {
+    font-size: 16px;
+  }
+  /* line 241, ../sass/styles/_dapper_nav.scss */
+  #navigation .region-searchbox #search-block-form .container-inline button {
+    font-size: 20px;
+  }
+}
+/* Only larger screens with columns */
+@media all and (min-width: 1024px) {
+  /* line 251, ../sass/styles/_dapper_nav.scss */
+  #navigation #main-menu {
+    font-size: 18px;
   }
 }

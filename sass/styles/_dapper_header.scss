@@ -92,7 +92,7 @@ body {
   }*/
   .line-item-summary,
   .cart-empty-block {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 200;
     display: block;
     color: rgba(255,255,255,0.5);
@@ -155,28 +155,6 @@ body {
   .block {
     margin: 18px 36px 0 0;
   }
-  /* Search Block Style */
-  #search-block-form {
-    background: rgba(255,255,255,0.3);
-    color: $color_accent_black;
-    input,
-    button {
-      padding: 2px 8px 0 8px;
-      line-height: 24px;
-      font-size: 20px;
-      background: none;
-      border: none;
-    }
-    button {
-      vertical-align: bottom;
-    }
-    input:focus {
-      outline: none;
-    }
-    &:hover {
-      background: #FFF;
-    }
-  }
   #block-commerce-cart-cart {
     .line-item-summary,
     .cart-empty-block {
@@ -192,5 +170,11 @@ body {
   /* Make the header bkg look seamless */
   #site-slogan {
     background-position: -330px top;
+  }
+  #block-commerce-cart-cart {
+    .line-item-summary,
+    .cart-empty-block {
+      font-size: 20px;
+    }
   }
 }
