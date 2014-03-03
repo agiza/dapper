@@ -57,6 +57,7 @@ $zen-auto-include-item-base: false;
     /* Move all the children of #main down to make room. */
     padding-top: $nav-height;//*2.3;
     position: relative;
+    padding-left: 8px;
   }
   #navigation {
     /* Move the navbar up inside #main's padding. */
@@ -236,10 +237,10 @@ $zen-auto-include-item-base: false;
   }
 }
 
-@media all and (min-width: 1200px) {
+@media all and (min-width: 1500px) {
   .page-node #content {
-    width: 80%;
-    margin: 0 auto;
+    max-width: 80%;
+    margin: 0 auto 0 0;
     font-size: 120%;
   }
 }

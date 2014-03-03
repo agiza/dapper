@@ -8,10 +8,34 @@
  */
 ?>
 
-<?php if ($view_mode == "dapper") { ?>
+<?php
+if ($view_mode == "catalog_tile") {
+
+  // Determine and pre-render image fields
+  $media = "";
+  $hasmedia = false;
+  foreach ($content as $id => $field) {
+    if ($field['#formatter'] == "image") {
+      // Force link to node, regardless of display format setting
+      $content[$id][0]['#path']['path'] = "node/".$node->nid;
+      // Render media prior to rendering details
+      $media .= render($content[$id]);
+      $hasmedia = true;
+    }
+  }
+  // Only render catalog tiles that have media
+  if ($hasmedia) { ?>
 <article class="node-<?php print $node->nid; ?> <?php print $classes; ?> clearfix"<?php print $attributes; ?>>
+  <div class="media">
+    <?php print $media; ?>
+  </div>
+  <div class="details">
+    <div class="title"><a href="<?php print $node_url; ?>"><?php print $title; ?></a></div>
+    <?php print render($content); ?>
+  </div>
+
 </article>
-<?php } else { ?>
+<?php }} else { ?>
 <article class="node-<?php print $node->nid; ?> <?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
   <?php if ($title_prefix || $title_suffix || $display_submitted || $unpublished || !$page && $title): ?>
